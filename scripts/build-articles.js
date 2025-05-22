@@ -9,14 +9,39 @@ const __dirname = path.dirname(__filename);
 const articlesDirectory = path.join(process.cwd(), "src/content/articles");
 const outputFile = path.join(process.cwd(), "src/content/articles.ts");
 
-// Read all markdown files
-const fileNames = fs.readdirSync(articlesDirectory);
-const articles = fileNames
-  .filter((fileName) => fileName.endsWith(".md"))
-  .map((fileName) => {
+// Function to recursively get all markdown files
+function getAllMarkdownFiles(dir, category = "") {
+  let results = [];
+  const items = fs.readdirSync(dir);
+
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+
+    if (stat.isDirectory()) {
+      // Recursively get files from subdirectories
+      const subCategory = category ? `${category}/${item}` : item;
+      results = results.concat(getAllMarkdownFiles(fullPath, subCategory));
+    } else if (item.endsWith(".md")) {
+      results.push({
+        path: fullPath,
+        category: category,
+        fileName: item,
+      });
+    }
+  }
+
+  return results;
+}
+
+// Get all markdown files recursively
+const markdownFiles = getAllMarkdownFiles(articlesDirectory);
+
+// Process all markdown files
+const articles = markdownFiles
+  .map(({ path: filePath, category, fileName }) => {
     const id = fileName.replace(/\.md$/, "");
-    const fullPath = path.join(articlesDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const fileContents = fs.readFileSync(filePath, "utf8");
     const { data, content } = matter(fileContents);
 
     return {
@@ -26,7 +51,7 @@ const articles = fileNames
       markdown: content,
       date: data.date,
       tags: data.tags || [],
-      isPinned: data.isPinned || false,
+      isPinned: data.isPinned || false
     };
   })
   .sort((a, b) => {
