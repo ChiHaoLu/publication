@@ -53,7 +53,7 @@ export default function RootLayout({
                   rel="noopener noreferrer"
                   className={styles.socialLink}
                 >
-                  💰 What I am Doing
+                  💰 How do i make a living
                 </a>
                 <a
                   href="https://www.youtube.com/@simple-retriever"
@@ -61,10 +61,10 @@ export default function RootLayout({
                   rel="noopener noreferrer"
                   className={styles.socialLink}
                 >
-                  🐶 Podcast - SimpleDog (Updating)
+                  🐶 Podcast - SimpleDog (Serializing)
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://open.spotify.com/show/26LrR5CY56Hbj2hUhe6d69?si=d2a1f7a088274268"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialLink}
