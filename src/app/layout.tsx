@@ -21,7 +21,9 @@ export default function RootLayout({
             <div className={styles.authorInfo}>
               <div className={styles.avatarContainer}>
                 <Image
-                  src="/images/Alfred.jpg"
+                  src={`${
+                    process.env.NEXT_PUBLIC_BASE_URL || ""
+                  }/images/Alfred.jpg`}
                   alt="Author avatar"
                   width={120}
                   height={120}

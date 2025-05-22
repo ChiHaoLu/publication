@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { getArticleById, getAllArticles } from "@/utils/articles";
@@ -43,7 +44,10 @@ export default async function ArticlePage({ params }: Props) {
           </div>
         </header>
         <div className={styles.content}>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+          >
             {article.markdown}
           </ReactMarkdown>
         </div>

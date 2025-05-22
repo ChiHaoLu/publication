@@ -8,7 +8,7 @@ excerpt: "如果再給我一次機會，好啦我已經有一次機會了"
 
 今天剛好看了黃大謙的影片有人問到上大學前的暑假要做什麼，突然覺得我也可以來分享一下這段時間要做什麼。不過我自己的例子有一點點點點不太精準，也就是不太符合一般大學生的模式，因為我是先在成大讀了半年書之後才重考，然後考去台大的，所以我已經有了半年的大學經驗，也因為多了這重考的半年時間讓我有機會思考我以後到底想要的是什麼。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MGb2DGxVVFE?si=PYMmrs_za1dTJK4z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MGb2DGxVVFE?si=PYMmrs_za1dTJK4z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
 
 ### 我自己這段時間在幹嘛
 在此之前我先講一下我都在幹嘛。在重考的那次指考結束之後到我 9 月真正在台大開學之間應該有大概兩個月的時間，這段時間我主要在忙的就是樂團發專輯、表演、賣周邊的事情，然後大練特練琴，同時也跟已經在資工系讀了一年的好朋友借了由片語 C 學程式設計，很粗糙地把前幾章練完，貌似是到 Function 那個章節而已吧（之後大一上我有把整本幹完）。出去玩的話好像有去過台南，剩下的就是泡樂器行耍廢。（還有先偷看一下系上有哪些正妹）
