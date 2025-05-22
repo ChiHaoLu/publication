@@ -1,7 +1,7 @@
 ---
 title: "社會課｜From Intern to Junior (II) — P2P Thinking"
 date: "2024-07-15"
-tags: ["社會課", "2024 二十大精選文章", "你的最佳職涯導師"]
+tags: ["社會課", "2024 十大精選文章", "你的最佳職涯導師"]
 isPinned: false
 excerpt: "Product-Oriented & Profit-Oriented"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "社會課｜直男的穿衣困境"
+title: "社會課｜台男的穿衣困境"
 date: "2024-10-03"
 tags: ["社會課"]
 isPinned: false
