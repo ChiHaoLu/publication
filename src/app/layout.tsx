@@ -25,10 +25,12 @@ export default function RootLayout({
             <div className={styles.authorInfo}>
               <div className={styles.avatarContainer}>
                 <img
-                  src={"https://i.imgur.com/hHDrhmW.gif"}
+                  src={
+                    "https://lh3.googleusercontent.com/a/ACg8ocJjCgU2uKr8lfhz19t7Tpa5R4WBSQSyU0ZP0hp6P5HikIE8Zzw=s576-c-no"
+                  }
                   alt="Author avatar"
-                  width={120}
-                  height={120}
+                  width={150}
+                  height={150}
                   className={styles.avatar}
                 />
               </div>
@@ -38,7 +40,7 @@ export default function RootLayout({
                 <div className={styles.podcastPlayer}>
                   <iframe
                     style={{ borderRadius: "12px" }}
-                    src="https://open.spotify.com/embed/episode/7IjM8dM1v3hMxcLW0VtRyj?utm_source=generator"
+                    src="https://open.spotify.com/embed/playlist/6iTMSsH72ohSiOmzAXVaXS?utm_source=generator"
                     width="100%"
                     height="152"
                     frameBorder="0"

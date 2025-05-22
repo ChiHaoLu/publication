@@ -13,6 +13,8 @@ export default function Home() {
     end: "",
   });
   const [currentPage, setCurrentPage] = useState(1);
+  const [sortBy, setSortBy] = useState<"date" | "textCount">("date");
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
   const articlesPerPage = 10;
 
   const articles = useMemo(() => getAllArticles(), []);
@@ -46,8 +48,21 @@ export default function Home() {
           return articleDate <= end;
         }
         return true;
+      })
+      .sort((a, b) => {
+        const order = sortOrder === "asc" ? 1 : -1;
+        switch (sortBy) {
+          case "date":
+            return (
+              order * (new Date(a.date).getTime() - new Date(b.date).getTime())
+            );
+          case "textCount":
+            return order * (a.textCount - b.textCount);
+          default:
+            return 0;
+        }
       });
-  }, [articles, selectedTags, dateRange]);
+  }, [articles, selectedTags, dateRange, sortBy, sortOrder]);
 
   // Calculate pagination
   const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
@@ -74,6 +89,22 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.filters}>
+        <div className={styles.sortControls}>
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value as "date" | "textCount")}
+            className={styles.sortSelect}
+          >
+            <option value="date">Date</option>
+            <option value="textCount">Text Count</option>
+          </select>
+          <button
+            onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}
+            className={styles.sortOrderButton}
+          >
+            {sortOrder === "asc" ? "↑" : "↓"}
+          </button>
+        </div>
         <div className={styles.dateFilters}>
           <input
             type="date"
@@ -109,6 +140,22 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.articles}>
+        <iframe
+          height="450"
+          width="100%"
+          title="媒體播放器"
+          src="https://embed.podcasts.apple.com/us/podcast/simple-dog/id1812055953?l=zh-Hant-TW&amp;itscg=30200&amp;itsct=podcast_box_player&amp;ls=1&amp;mttnsubad=1812055953&amp;theme=auto"
+          id="embedPlayer"
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+          allow="autoplay *; encrypted-media *; clipboard-write"
+          style={{
+            border: "0px",
+            borderRadius: "12px",
+            width: "100%",
+            height: "450px",
+            maxWidth: "660px",
+          }}
+        />
         {currentArticles.map((article) => (
           <ArticleCard
             key={article.id}
