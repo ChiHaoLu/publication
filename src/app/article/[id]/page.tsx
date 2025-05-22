@@ -1,7 +1,15 @@
 import ReactMarkdown from "react-markdown";
 import styles from "./page.module.css";
 import Link from "next/link";
-import { getArticleById } from "@/utils/articles";
+import { getArticleById, getAllArticles } from "@/utils/articles";
+
+// Generate static paths for all articles
+export async function generateStaticParams() {
+  const articles = getAllArticles();
+  return articles.map((article) => ({
+    id: article.id,
+  }));
+}
 
 interface Props {
   params: Promise<{ id: string }>;
