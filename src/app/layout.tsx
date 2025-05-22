@@ -20,15 +20,12 @@ export default function RootLayout({
           <aside className={styles.sidebar}>
             <div className={styles.authorInfo}>
               <div className={styles.avatarContainer}>
-                <Image
-                  src={`${
-                    process.env.NEXT_PUBLIC_BASE_URL || ""
-                  }/images/Alfred.jpg`}
+                <img
+                  src={"https://i.imgur.com/hHDrhmW.gif"}
                   alt="Author avatar"
                   width={120}
                   height={120}
                   className={styles.avatar}
-                  priority
                 />
               </div>
               <h2>うさみ</h2>
