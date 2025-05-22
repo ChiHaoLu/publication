@@ -37,6 +37,19 @@ function getAllMarkdownFiles(dir, category = "") {
 // Get all markdown files recursively
 const markdownFiles = getAllMarkdownFiles(articlesDirectory);
 
+// Function to calculate text count excluding iframe content
+function calculateTextCount(content) {
+  // Remove iframe content
+  const contentWithoutIframes = content.replace(
+    /<iframe[\s\S]*?<\/iframe>/g,
+    ""
+  );
+  // Remove HTML tags
+  const plainText = contentWithoutIframes.replace(/<[^>]*>/g, "");
+  // Count characters
+  return plainText.length;
+}
+
 // Process all markdown files
 const articles = markdownFiles
   .map(({ path: filePath, category, fileName }) => {
@@ -51,7 +64,8 @@ const articles = markdownFiles
       markdown: content,
       date: data.date,
       tags: data.tags || [],
-      isPinned: data.isPinned || false
+      isPinned: data.isPinned || false,
+      textCount: calculateTextCount(content),
     };
   })
   .sort((a, b) => {

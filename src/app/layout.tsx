@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import "./globals.css";
 import styles from "./layout.module.css";
+import PublicationStats from "@/components/PublicationStats";
+import { calculateStats } from "@/utils/stats";
 
 export const metadata: Metadata = {
   title: "うさみのまいにち社会",
@@ -13,6 +15,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const stats = calculateStats();
+
   return (
     <html lang="en">
       <body className="antialiased">
@@ -67,6 +71,7 @@ export default function RootLayout({
                 >
                   🥵 Podcast - 隨便亂 Lu (Discontinued)
                 </a>
+                <PublicationStats stats={stats} />
               </div>
             </div>
           </aside>

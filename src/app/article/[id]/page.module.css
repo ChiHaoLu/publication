@@ -34,10 +34,18 @@
   margin: 0 0 20px 0;
 }
 
-.date {
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.date,
+.textCount {
   color: #666;
   font-size: 1rem;
-  margin: 0 0 20px 0;
+  margin: 0;
 }
 
 .tags {

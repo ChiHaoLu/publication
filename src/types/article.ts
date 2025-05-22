@@ -6,4 +6,5 @@ export interface Article {
   date: string;
   tags: string[];
   isPinned: boolean;
+  textCount: number;
 } 

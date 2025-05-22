@@ -34,7 +34,10 @@ export default async function ArticlePage({ params }: Props) {
       <article className={styles.article}>
         <header className={styles.header}>
           <h1>{article.title}</h1>
-          <p className={styles.date}>{article.date}</p>
+          <div className={styles.meta}>
+            <p className={styles.date}>{article.date}</p>
+            <p className={styles.textCount}>{article.textCount} characters</p>
+          </div>
           <div className={styles.tags}>
             {article.tags.map((tag) => (
               <span key={tag} className={styles.tag}>
