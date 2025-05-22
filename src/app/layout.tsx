@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import "./globals.css";
 import styles from "./layout.module.css";
 import PublicationStats from "@/components/PublicationStats";
@@ -37,42 +36,26 @@ export default function RootLayout({
               <h2>うさみ</h2>
               <p>Not a complete person. But a complete rabbit.</p>
               <div className={styles.socialLinks}>
-                <div className={styles.podcastPlayer}>
-                  <iframe
-                    style={{ borderRadius: "12px" }}
-                    src="https://open.spotify.com/embed/playlist/6iTMSsH72ohSiOmzAXVaXS?utm_source=generator"
-                    width="100%"
-                    height="152"
-                    frameBorder="0"
-                    allowFullScreen
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"
-                  />
-                </div>
                 <a
                   href="https://www.chihaolu.me/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialLink}
                 >
-                  💰 How do i make a living
+                  💰 How do I make a living
                 </a>
-                <a
-                  href="https://www.youtube.com/@simple-retriever"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.socialLink}
-                >
-                  🐶 Podcast - SimpleDog (Serializing)
-                </a>
-                <a
-                  href="https://open.spotify.com/show/26LrR5CY56Hbj2hUhe6d69?si=d2a1f7a088274268"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.socialLink}
-                >
-                  🥵 Podcast - 隨便亂 Lu (Discontinued)
-                </a>
+                <div className={styles.podcastPlayer}>
+                  <iframe
+                    style={{ borderRadius: "12px" }}
+                    src="https://open.spotify.com/embed/track/3zLG8d7B0IPVOzCfGEgLhV?utm_source=generator"
+                    width="100%"
+                    height="152"
+                    frameBorder="0"
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                  ></iframe>
+                </div>
                 <PublicationStats stats={stats} />
               </div>
             </div>
