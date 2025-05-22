@@ -1,0 +1,54 @@
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.filters {
+  margin-bottom: 40px;
+}
+
+.dateFilters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.dateInput {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.tagFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tagButton {
+  background: #f0f0f0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.tagButton:hover {
+  background: #e0e0e0;
+}
+
+.tagButton.selected {
+  background: #333;
+  color: white;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
