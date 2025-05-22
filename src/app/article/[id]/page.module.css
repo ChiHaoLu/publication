@@ -142,6 +142,17 @@
   background-color: #f8f9fa;
 }
 
+.content a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.content a:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
 .notFound {
   text-align: center;
   padding: 40px;

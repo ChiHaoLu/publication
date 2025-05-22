@@ -4,7 +4,6 @@ import matter from "gray-matter";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const articlesDirectory = path.join(process.cwd(), "src/content/articles");
 const outputFile = path.join(process.cwd(), "src/content/articles.ts");
