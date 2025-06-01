@@ -25,7 +25,7 @@ export default function RootLayout({
               <div className={styles.avatarContainer}>
                 <img
                   src={
-                    "https://lh3.googleusercontent.com/a/ACg8ocJjCgU2uKr8lfhz19t7Tpa5R4WBSQSyU0ZP0hp6P5HikIE8Zzw=s576-c-no"
+                    "https://lh3.googleusercontent.com/a/ACg8ocKvx4jPJiy7awFTcbtIpd2PHYwXbGoPkB5U6TJde0CnQ5wGdn3b=s576-c-no"
                   }
                   alt="Author avatar"
                   width={150}
